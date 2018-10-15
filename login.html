@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Online Parking</title>
+        <link rel="stylesheet" href="login.css">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename = 'login.css') }}">-->
+        <link href="{{ url_for('static', filename='login.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='index/icon2.ico') }}" />
+    </head>
+
+    <body>
+       <center> <img src="image2.jpg" style="width:15%;"></center>
+        <div class="login-page">
+            <p class="welcometext">Welcome to Online Parking!</p>
+            <div class="form">
+                <form class="register-form" action="http://127.0.0.1:5000/url" method="POST">
+                    <input type="text" name="usernamer" placeholder="Username"/>
+                    <input type="password" name="passwordr" placeholder="Password"/>
+                    <input type="text" name="emailr" placeholder="Email id"/>
+                    <button type="submit" value="submit">Join</button>
+                    <p class="message">Already a member? <a href="#">Login</a></p>
+                </form>
+
+                <form class="login-form" action="http://127.0.0.1:5000/login" method="POST">
+                    <input type="text" name="usernamel" placeholder="Username"/>
+                    <input type="password" name="passwordl" placeholder="Password"/>
+                    <button>Login</button>
+                    <p class="message">Not a member? <a href="#">Register</a></p>
+                </form>
+           
+            </div>
+        </div>
+
+    
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height: "toggle",opacity:"toggle"},"fast")
+            });
+        </script>
+    </body>
+</html>
